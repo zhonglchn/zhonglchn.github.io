@@ -1,149 +1,204 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN" class="loading">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>git - 小宇宙</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="课程目标目标1: 了解git 历史 
-目标2: 了解git 与 svn 的区别 
-目标3: 掌握git 的工作流程 
-目标4: 熟悉git 安装使用 
-目标5: 掌握git 管理文件版本 
-目标6:,"> 
-    <meta name="author" content="Zhong L"> 
-    <link rel="alternative" href="atom.xml" title="小宇宙" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
-    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Zhong L">
+
+
+
+
+
+<title>git | 小宇宙</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
 
     
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
-
     
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-
+        
     
-<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
 
-    
-<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
-
-    
-<link rel="stylesheet" href="/css/obsidian.css">
-
-    
-<link rel="stylesheet" href="/css/ball-atom.min.css">
 
 <meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">zhongl&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
 
-
-<body class="loading">
-    <div class="loader">
-        <div class="la-ball-atom la-2x">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">zhongl&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
     </div>
-    <span id="config-title" style="display:none">小宇宙</span>
-    <div id="loader"></div>
-    <div id="single">
-    <div class="scrollbar gradient-bg-rev"></div>
-<div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <div class="navigation animated fadeIn fast delay-1s">
-        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://yoursite.com">
-        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">git</h3>
-        <div class="social">
-            <!--        <div class="like-icon">-->
-            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-            <!--        </div>-->
-            <div>
-                <div class="share">
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">git</h1>
+            
+                <div class="post-meta">
                     
-                        <a href="javascript:;" class="iconfont icon-share1"></a>
-                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                        Author: <a itemprop="author" rel="author" href="/">Zhong L</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">一月 1, 2020&nbsp;&nbsp;15:47:50</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/java/">java</a>
+                            
+                        </span>
                     
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+            
+        </header>
 
-    <div class="section">
-        <div class=article-header-wrapper>
-    <div class="article-header">
-        <div class="article-cover animated fadeIn" style="
-            animation-delay: 600ms;
-            animation-duration: 1.2s;
-            background-image: 
-                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
-        </div>
-        <div class="else">
-            <p class="animated fadeInDown">
-                
-                <a href="/categories/java"><b>「
-                    </b>JAVA<b> 」</b></a>
-                
-                一月 01, 2020
-            </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/01/Git/" title="git" class="">git</a>
-            </h3>
-            
-            <p class="post-count animated fadeInDown">
-                
-                <span>
-                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    12k
-                </span>
-                
-                
-                <span>
-                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    11 mins.
-                </span>
-                
-                
-                
-                <span id="busuanzi_container_page_pv">
-                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                    <span id="busuanzi_value_page_pv">0</span>
-                </span>
-                
-            </p>
-            
-            
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-            
-        </div>
-    </div>
-</div>
-
-<div class="screen-gradient-after">
-    <div class="screen-gradient-content">
-        <div class="screen-gradient-content-inside">
-            <div class="bold-underline-links screen-gradient-sponsor">
-                <p>
-                    <span class="animated fadeIn delay-1s"></span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="article">
-    <div class='main'>
-        <div class="content markdown animated fadeIn">
+        <div class="post-content">
             <h2 id="课程目标"><a href="#课程目标" class="headerlink" title="课程目标"></a>课程目标</h2><p>目标1: 了解git 历史 </p>
 <p>目标2: 了解git 与 svn 的区别 </p>
 <p><strong>目标3: 掌握git 的工作流程</strong> </p>
@@ -157,13 +212,9 @@
 </blockquote>
 <p><strong>需求</strong></p>
 <p>在项目开发中，团队协作管理代码和文件是每天必须要做的事情。大家一定会碰到如下几个场景和问题？</p>
-<pre><code>1：协同修改，多人并行开发修改服务器的文件
-2：数据备份
-3：版本管理，权限控制
-4：如果文件和工程误删了还能找回来吗？
-5：分支管理 1.0 2.0
-6：遇到了文件冲突如何解决？
-7：如何把一些我临时保存的文件不要提交?</code></pre><p>Svn版本控制软件: </p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>：协同修改，多人并行开发修改服务器的文件</span><br><span class="line"><span class="number">2</span>：数据备份</span><br><span class="line"><span class="number">3</span>：版本管理，权限控制</span><br><span class="line"><span class="number">4</span>：如果文件和工程误删了还能找回来吗？</span><br><span class="line"><span class="number">5</span>：分支管理 <span class="number">1.0</span> <span class="number">2.0</span></span><br><span class="line"><span class="number">6</span>：遇到了文件冲突如何解决？</span><br><span class="line"><span class="number">7</span>：如何把一些我临时保存的文件不要提交?</span><br></pre></td></tr></table></figure>
+
+<p>Svn版本控制软件: </p>
 <p>Git版本控制器软件: </p>
 <p><strong>小结</strong></p>
 <ul>
@@ -176,11 +227,9 @@
 <p>同生活中的许多伟大事件一样，Git 诞生于一个极富纷争大举创新的年代。</p>
 <p>Linux 内核开源项目有着为数众广的参与者。绝大多数的 Linux 内核维护工作都花在了提交补丁和保存归档的繁琐事务上（1991－2002 年间）。到 2002 年，Linux 系统已经发展了十年了，代码库之大让 Linus 很难继续通过手工方式管理了，于是整个项目组开始启用分布式版本控制系统 BitKeeper 来管理和维护代码。 </p>
 <p>到 2005 年的时候，开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了免费使用 BitKeeper 的权力。这就迫使 Linux 开源社区（特别是 Linux 的缔造者 Linus Torvalds ）不得不吸取教训，只有开发一套属于自己的版本控制系统才不至于重蹈覆辙。他们对新的系统订了若干目标： </p>
-<pre><code>• 速度快 
-• 简单的设计 
-• 对非线性开发模式的强力支持（允许上千个并行开发的分支） 
-• 完全分布式 
-• 有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量） </code></pre><p>Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">• 速度快 </span><br><span class="line">• 简单的设计 </span><br><span class="line">• 对非线性开发模式的强力支持（允许上千个并行开发的分支） </span><br><span class="line">• 完全分布式 </span><br><span class="line">• 有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量）</span><br></pre></td></tr></table></figure>
+
+<p>Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。</p>
 <p>Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。</p>
 <p>历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了。</p>
 <h3 id="03、Git与Svn区别"><a href="#03、Git与Svn区别" class="headerlink" title="03、Git与Svn区别"></a>03、Git与Svn区别</h3><blockquote>
@@ -190,8 +239,9 @@
 <p>下图就是标准的集中式版本控制工具管理方式:</p>
 <p>集中管理方式在一定程度上看到其他开发人员在干什么，而管理员也可以很轻松掌握每个人的开发权限。</p>
 <p>但是相较于其优点而言，集中式版本控制工具缺点很明显：</p>
-<pre><code>服务器单点故障
-容错性差</code></pre><h4 id="3-2-分布式版本控制（Git）"><a href="#3-2-分布式版本控制（Git）" class="headerlink" title="3.2 分布式版本控制（Git）"></a>3.2 分布式版本控制（Git）</h4><p>Git是分布式版本控制系统，那么它可以没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">服务器单点故障</span><br><span class="line">容错性差</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-分布式版本控制（Git）"><a href="#3-2-分布式版本控制（Git）" class="headerlink" title="3.2 分布式版本控制（Git）"></a>3.2 分布式版本控制（Git）</h4><p>Git是分布式版本控制系统，那么它可以没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
 <p>下图就是分布式版本控制工具管理方式：</p>
 <p> <strong>小结</strong></p>
 <ul>
@@ -345,12 +395,11 @@
 <li><p>git config –global user.name “nameVal”</p>
 </li>
 <li><p>git config –global user.email “emailVal”</p>
-<pre><code class="shell">git config --global user.name &quot;lixiaohua&quot;
-git config --global user.email &quot;lixiaohua@itcast.cn&quot;</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "lixiaohua"</span><br><span class="line">git config --global user.email "lixiaohua@itcast.cn"</span><br></pre></td></tr></table></figure>
+
 <p>细节：</p>
-<pre><code class="txt">局部的用户信息放在：当前项目的   .git/config
-全局的用户信息放在：系统盘的--用户目录--用户名目录-- .gitconfig文件中
-              [C:\Users\Administrator\.gitconfig]</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">局部的用户信息放在：当前项目的   .git&#x2F;config</span><br><span class="line">    全局的用户信息放在：系统盘的--用户目录--用户名目录-- .gitconfig文件中</span><br><span class="line">                  [C:\Users\Administrator\.gitconfig]</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 </li>
@@ -400,9 +449,9 @@ git config --global user.email &quot;lixiaohua@itcast.cn&quot;</code></pre>
 </tr>
 </tbody></table>
 <p><strong>小结</strong></p>
-<pre><code>创建版本库的步骤：
-1. 进入需要管理的目录
-2. 执行 git init 命令</code></pre><h3 id="07、Git命令：添加文件并提交"><a href="#07、Git命令：添加文件并提交" class="headerlink" title="07、Git命令：添加文件并提交"></a>07、Git命令：添加文件并提交</h3><blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建版本库的步骤：</span><br><span class="line"><span class="number">1.</span> 进入需要管理的目录</span><br><span class="line"><span class="number">2.</span> 执行 git init 命令</span><br></pre></td></tr></table></figure>
+
+<h3 id="07、Git命令：添加文件并提交"><a href="#07、Git命令：添加文件并提交" class="headerlink" title="07、Git命令：添加文件并提交"></a>07、Git命令：添加文件并提交</h3><blockquote>
 <p><strong>目标：</strong>Git是如何在仓库中添加文件并提交到本地仓库?</p>
 </blockquote>
 <p>  版本控制系统，其目的就是跟踪文本文件的改动，例如我们开发时编写的.java、.properties本质都是文本文件。文件中每一个字符的变化都会被跟踪并且管理。</p>
@@ -444,8 +493,9 @@ git config --global user.email &quot;lixiaohua@itcast.cn&quot;</code></pre>
 <li>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</li>
 </ul>
 <p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
-<pre><code>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
-第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</code></pre><p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。</p>
+ <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">第一步是用git <span class="keyword">add</span><span class="bash">把文件添加进去，实际上就是把文件修改添加到暂存区；</span></span><br><span class="line">第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</span><br></pre></td></tr></table></figure>
+
+<p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。</p>
 <p><strong>小结：</strong>你可以简单理解为，需要提交的文件通通放到暂存区，然后，一次性提交暂存区到版本库。</p>
 <h3 id="09、Git命令：文件的修改、状态、日志"><a href="#09、Git命令：文件的修改、状态、日志" class="headerlink" title="09、Git命令：文件的修改、状态、日志"></a>09、Git命令：文件的修改、状态、日志</h3><blockquote>
 <p><strong>目标：</strong>掌握文件的修改以及修改的提交及状态日志的查看</p>
@@ -469,310 +519,72 @@ git config --global user.email &quot;lixiaohua@itcast.cn&quot;</code></pre>
 <p><img src="assets/clip_image055.jpg" alt="img"> </p>
 <p>提</p>
 
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls"
-                data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-            <ul id="audio-list" style="display:none">
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Zhong L</span>
+                    </p>
                 
                 
-                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://yoursite.com/2020/01/01/Git/">http://yoursite.com/2020/01/01/Git/</a></span>
+                    </p>
                 
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span></span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
                     
-            </ul>
+                    
+                        <a href="/tags/git/"># git</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
             
             
+            <a class="next" rel="next" href="/2019/12/31/hello-world/">Hello World</a>
             
-    <div id='gitalk-container' class="comment link"
-        data-ae='true'
-        data-ci='ec894e2b66f752e8b7fb'
-        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
-        data-r='blog-comments'
-        data-o='TriDiamond'
-        data-a='TriDiamond'
-        data-d=''
-    >留言</div>
+        </section>
 
 
-            
-            
-        </div>
-        <div class="sidebar">
-            <div class="box animated fadeInRight">
-                <div class="subbox">
-                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
-                    <p>Zhong L</p>
-                    <span>苟利国家生死以</span>
-                    <dl>
-                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
-                                    class=" iconfont icon-github"></span></a></dd>
-                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
-                                    class=" iconfont icon-twitter"></span></a></dd>
-                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
-                                    class=" iconfont icon-stack-overflow"></span></a></dd>
-                    </dl>
-                </div>
-                <ul>
-                    <li><a href="/">2 <p>文章</p></a></li>
-                    <li><a href="/categories">1 <p>分类</p></a></li>
-                    <li><a href="/tags">1 <p>标签</p></a></li>
-                </ul>
-            </div>
-            
-            
-            
-            <div class="box sticky animated fadeInRight faster">
-                <div id="toc" class="subbox">
-                    <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#课程目标"><span class="toc-number">1.</span> <span class="toc-text">课程目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一部分：Git的简介与安装"><span class="toc-number">2.</span> <span class="toc-text">第一部分：Git的简介与安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#01、版本控制是什么？"><span class="toc-number">2.1.</span> <span class="toc-text">01、版本控制是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02、Git的由来和发展史"><span class="toc-number">2.2.</span> <span class="toc-text">02、Git的由来和发展史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03、Git与Svn区别"><span class="toc-number">2.3.</span> <span class="toc-text">03、Git与Svn区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04、GitHub和码云"><span class="toc-number">2.4.</span> <span class="toc-text">04、GitHub和码云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05、Git安装：客户端和服务端"><span class="toc-number">2.5.</span> <span class="toc-text">05、Git安装：客户端和服务端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二部分：Git命令入门到精通"><span class="toc-number">3.</span> <span class="toc-text">第二部分：Git命令入门到精通</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#06、Git命令：创建版本库"><span class="toc-number">3.1.</span> <span class="toc-text">06、Git命令：创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07、Git命令：添加文件并提交"><span class="toc-number">3.2.</span> <span class="toc-text">07、Git命令：添加文件并提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#08、Git概念：工作区、暂存区、版本库"><span class="toc-number">3.3.</span> <span class="toc-text">08、Git概念：工作区、暂存区、版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#09、Git命令：文件的修改、状态、日志"><span class="toc-number">3.4.</span> <span class="toc-text">09、Git命令：文件的修改、状态、日志</span></a></li></ol></li></ol>
-                </div>
-            </div>
-            
-            
-        </div>
-    </div>
+    </article>
 </div>
 
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Zhong L | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
-</div>
-    <div id="back-to-top" class="animated fadeIn faster">
-        <div class="flow"></div>
-        <span class="percentage animated fadeIn faster">0%</span>
-        <span class="iconfont icon-top02 animated fadeIn faster"></span>
-    </div>
-</body>
-<footer>
-    <p class="copyright" id="copyright">
-        &copy; 2020
-        <span class="gradient-text">
-            Zhong L
-        </span>.
-        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        Theme
-        <span class="gradient-text">
-            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
-        </span>
-        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
-    </p>
 </footer>
 
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script>
-  MathJax.Hub.Config({
-    "HTML-CSS": {
-      preferredFont: "TeX",
-      availableFonts: ["STIX", "TeX"],
-      linebreaks: {
-        automatic: true
-      },
-      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-      inlineMath: [
-        ["$", "$"],
-        ["\\(", "\\)"]
-      ],
-      processEscapes: true,
-      ignoreClass: "tex2jax_ignore|dno",
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      noUndefined: {
-        attributes: {
-          mathcolor: "red",
-          mathbackground: "#FFEEEE",
-          mathsize: "90%"
-        }
-      },
-      Macros: {
-        href: "{}"
-      }
-    },
-    messageStyle: "none"
-  });
-</script>
-<script>
-  function initialMathJax() {
-    MathJax.Hub.Queue(function () {
-      var all = MathJax.Hub.getAllJax(),
-        i;
-      // console.log(all);
-      for (i = 0; i < all.length; i += 1) {
-        console.log(all[i].SourceElement().parentNode)
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  }
-
-  function reprocessMathJax() {
-    if (typeof MathJax !== 'undefined') {
-      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-    }
-  }
-</script>
-
-
-
-    
-<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
-
-    
-<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/obsidian.js"></script>
-<script src="/js/jquery.truncate.js"></script>
-<script src="/js/search.js"></script>
-
-
-<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
-
-
-<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-
-
-<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
-
-
-    
-<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
-
-
-
-
-    
-<script src="/js/busuanzi.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            if ($('span[id^="busuanzi_"]').length) {
-                initialBusuanzi();
-            }
-        });
-    </script>
-
-
-
-<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
-<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
-
-
-<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
-<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
     </div>
-</div>
-
-
-
-
-
-
-
-<script>
-    function initialTyped () {
-        var typedTextEl = $('.typed-text');
-        if (typedTextEl && typedTextEl.length > 0) {
-            var typed = new Typed('.typed-text', {
-                strings: ["苟利国家生死以", "岂因祸福避趋之"],
-                typeSpeed: 90,
-                loop: true,
-                loopCount: Infinity,
-                backSpeed: 20,
-            });
-        }
-    }
-
-    if ($('.article-header') && $('.article-header').length) {
-        $(document).ready(function () {
-            initialTyped();
-        });
-    }
-</script>
-
-
-
-
+</body>
 </html>
