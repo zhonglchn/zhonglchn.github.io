@@ -402,11 +402,11 @@
 <p>  什么是版本库呢？版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。由于git是分布式版本管理工具，所以git在不需要联网的情况下也具有完整的版本管理能力。</p>
 <p>创建一个版本库非常简单:</p>
 <ul>
-<li><p>首先，选择一个合适的地方，创建一个空目录。在D:\test目录下，创建了一个hello目录： <img src="assets/clip_image023.jpg" alt="img"></p>
+<li><p>首先，选择一个合适的地方，创建一个空目录。在D:\test目录下，创建了一个hello目录： <img src="/.xyz//clip_image023.jpg" alt="img"></p>
 </li>
-<li><p>使用git init命令把这个目录变成Git可以管理的仓库：<img src="assets/clip_image025.jpg" alt="img"></p>
+<li><p>使用git init命令把这个目录变成Git可以管理的仓库：<img src="/.xyz//clip_image025.jpg" alt="img"></p>
 </li>
-<li><p>命令输入后，你已经创建了一个空的Git仓库。此时你会在hello目录下发现一个隐藏目录.git <img src="assets/clip_image027.jpg" alt="img"></p>
+<li><p>命令输入后，你已经创建了一个空的Git仓库。此时你会在hello目录下发现一个隐藏目录.git <img src="/.xyz//clip_image027.jpg" alt="img"></p>
 <p>这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了。如果你没有看到.git目录，那是因为这个目录默认是隐藏的，用ls -ah命令就可以看见。</p>
 <p>此处的hello目录就是我们的：<strong>工作区 (work tree)</strong>，存放所有当前文档。此目录下的文件才会被Git管理，hello中的.git目录就是我们的：<strong>本地仓库</strong>，管理并保存所有的文档变化及历史状态。</p>
 </li>
@@ -447,17 +447,17 @@
 <p><strong>目标：</strong>Git是如何在仓库中添加文件并提交到本地仓库?</p>
 </blockquote>
 <p>  版本控制系统，其目的就是跟踪文本文件的改动，例如我们开发时编写的.java、.properties本质都是文本文件。文件中每一个字符的变化都会被跟踪并且管理。</p>
-<p><img src="assets/1552015317597.png" alt="1552015317597"></p>
-<p><img src="assets/1551861304830.png" alt="1551861304830"></p>
+<p><img src="/.xyz//1552015317597.png" alt="1552015317597"></p>
+<p><img src="/.xyz//1551861304830.png" alt="1551861304830"></p>
 <ul>
 <li><p>我们在当前的hello目录下创建一个新的文本文件：readme.txt</p>
 </li>
 <li><p>编写一段文字：hello Git!</p>
 </li>
-<li><p>接下来，我们使用 git add 命令，将文件添加到暂存区<img src="assets/clip_image035.jpg" alt="img"></p>
+<li><p>接下来，我们使用 git add 命令，将文件添加到暂存区<img src="/.xyz//clip_image035.jpg" alt="img"></p>
 <p>没有任何的反应，证明没有问题。</p>
 </li>
-<li><p>使用 git commit 命令，将暂存区文件提交到本地仓库<img src="assets/clip_image037.jpg" alt="img"></p>
+<li><p>使用 git commit 命令，将暂存区文件提交到本地仓库<img src="/.xyz//clip_image037.jpg" alt="img"></p>
 </li>
 </ul>
 <p><strong>命令解释</strong>:</p>
@@ -465,7 +465,7 @@
 <p>   -m 参数，是本次提交的说明信息，用来注释本次提交做了些说明事情。</p>
 <p>*<em>总结: *</em>将一个文件添加到本地仓库，分两步：</p>
 <ul>
-<li>使用 git add <file> 命令，添加文件。可以一次添加多个文件。</li>
+<li>使用 git add <file> 命令，添加文件。可以一次添加多个文件。</file></li>
 <li>使用 git commit -m ‘’ 命令，提交，一次即可。</li>
 </ul>
 <p>可能大家会有疑问，为什么这里不是直接commit提交，而是要经过add和commit两个步骤呢？</p>
@@ -501,14 +501,14 @@
 <h4 id="9-1-比较差异"><a href="#9-1-比较差异" class="headerlink" title="9.1 比较差异"></a>9.1 比较差异</h4><p>用<code>git diff HEAD readme.txt</code>命令可以查看工作区和版本库里面最新版本的区别：</p>
 <p>可以发现，与版本库中的 readme.txt相比，我们多了一行文本！</p>
 <h4 id="9-2-查看修改状态"><a href="#9-2-查看修改状态" class="headerlink" title="9.2 查看修改状态"></a>9.2 查看修改状态</h4><hr>
-<p>我们如果不确定自己的哪些文件被修改了，可以使用git status命令，查看当前工作区的状态： <img src="assets/clip_image047.jpg" alt="img"> </p>
+<p>我们如果不确定自己的哪些文件被修改了，可以使用git status命令，查看当前工作区的状态： <img src="/.xyz//clip_image047.jpg" alt="img"> </p>
 <p>可以清楚的看到：changes not staged for commit（修改没有被缓存，需要使用git add来进行添加操作）,我们使用git add 命令，添加到暂存区：</p>
-<p><img src="assets/clip_image049.jpg" alt="img"> </p>
+<p><img src="/.xyz//clip_image049.jpg" alt="img"> </p>
 <p>再次查看状态：</p>
-<p><img src="assets/clip_image051.jpg" alt="img"> </p>
-<p>这次提示： changes to be commited （修改需要被提交），我们使用git commit 进行提交<img src="assets/clip_image053.jpg" alt="img"></p>
+<p><img src="/.xyz//clip_image051.jpg" alt="img"> </p>
+<p>这次提示： changes to be commited （修改需要被提交），我们使用git commit 进行提交<img src="/.xyz//clip_image053.jpg" alt="img"></p>
 <p>再次查看状态：</p>
-<p><img src="assets/clip_image055.jpg" alt="img"> </p>
+<p><img src="/.xyz//clip_image055.jpg" alt="img"> </p>
 <p>提</p>
 
         </div>
