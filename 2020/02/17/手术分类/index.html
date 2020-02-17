@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Zhong L">
+
+
+
+
+
+<title>手术分类 | 明天就放假了</title>
+
+
+
+    <link rel="icon" href="/favicon.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">ZhongL&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">ZhongL&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">手术分类</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Zhong L</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">二月 17, 2020&nbsp;&nbsp;15:28:40</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%9D%8E%E6%83%A0%E7%A8%8B/">李惠程</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="肝胆胰外科"><a href="#肝胆胰外科" class="headerlink" title="肝胆胰外科"></a>肝胆胰外科</h3><h4 id="一级手术"><a href="#一级手术" class="headerlink" title="一级手术"></a>一级手术</h4><p>1、 简单开放性胆囊切除、胆囊造口术<br>2、 简单胆总管切开探查及造口术<br>3、 肝囊肿开窗及肝脓肿切开引流术<br>4、 急性胰腺炎引流手术及胰腺囊肿外引流术</p>
+<h4 id="二级手术"><a href="#二级手术" class="headerlink" title="二级手术"></a>二级手术</h4><p>1、 较复杂的开放性胆囊切除术<br>2、 较复杂的胆总管切开探查及造口术<br>3、 一般胆囊、胆总管—十二指肠、空肠吻合术<br>4、 肝破裂修补、肝活检及肝边缘病灶切除术<br>5、 边缘肝切除、肝左外叶切除术<br>6、 肝囊肿内引流、胰腺假性囊肿内引流术<br>7、 胰尾切除、胰体尾裂伤手术及胰腺坏死组织清除及引流术<br>8、 腹腔镜胆囊切除及肝囊肿开窗<br>9、 脾切除术<br>10、 肝动脉结扎、栓塞及肝动脉、门静脉插管、化疗盒植入术<br>11、 Oddi括约肌成形术<br>12、 经皮肝穿胆管造影及引流术（PTC、PTCD）<br>13、 简单门体断流术</p>
+<h4 id="三级手术"><a href="#三级手术" class="headerlink" title="三级手术"></a>三级手术</h4><p>1、 半肝切除术<br>2、 肝门部肝胆管成形及高位肝胆管空肠吻合术<br>3、 复杂或改进的胆总管空肠吻合术<br>4、 胆总管囊肿手术<br>5、 再次胆道手术<br>6、 腹腔镜胆道手术<br>7、 内镜、X光或超声引导下胆石、胆道狭窄支架手术<br>8、 胰十二指肠切除、全胰、胰头切除术<br>9、 胰头部复杂裂伤及胰十二指肠联合伤手术<br>10、 门腔静脉分流及复杂门体断流手术<br>11、 腹腔镜下肝边缘切除及脾切除术</p>
+<h4 id="四级手术"><a href="#四级手术" class="headerlink" title="四级手术"></a>四级手术</h4><p>1、 肝移植受体手术<br>2、 半肝以上肝切除、肝中叶切除、肝尾状叶切除<br>3、 活体供肝切取术<br>4、 胰腺移植<br>5、 布—加综合征手术<br>6、 新技术新项目手术</p>
+<h3 id="胃肠外科"><a href="#胃肠外科" class="headerlink" title="胃肠外科"></a>胃肠外科</h3><h4 id="一级手术-1"><a href="#一级手术-1" class="headerlink" title="一级手术"></a>一级手术</h4><p>1、 一般腹外疝修补术<br>2、 阑尾切除术<br>3、 胃十二指肠溃疡单纯修补术<br>4、 简单胃肠道破裂修补及造口术<br>5、 一般痔、肛瘘手术<br>6、 小肠吻合及其他腹腔、胃肠道简单手术</p>
+<h4 id="二级手术-1"><a href="#二级手术-1" class="headerlink" title="二级手术"></a>二级手术</h4><p>1、 良性病变的胃、结肠切除及重建<br>2、 迷走神经切断手术<br>3、 简单门体静脉断流术<br>4、 十二指肠手术及广泛小肠切除术<br>5、 复杂疝修补术及人工补片疝修补术<br>6、 复杂痔、肛瘘手术<br>7、 弥漫性腹膜炎的剖腹探查术<br>8、 胃肠道瘘修补及造口闭合术<br>9、 一般消化道异物取出术</p>
+<h4 id="三级手术-1"><a href="#三级手术-1" class="headerlink" title="三级手术"></a>三级手术</h4><p>1、 全胃、全（次全）结肠切除术<br>2、 胃癌、结肠癌、直肠癌根治术<br>3、 贲门部手术<br>4、 肛门、肛管成形手术<br>5、 腹部外伤休克状态下的探查术<br>6、 消化道出血休克状态下的探查术<br>7、 腹腔镜下胃肠穿孔修补及阑尾切除术<br>8、 复杂胃肠内镜治疗<br>9、 良性病变的一般腹腔镜胃肠道手术<br>10、 复杂及高危险消化道异物取出术<br>11、 巨大息肉摘除术</p>
+<h4 id="四级手术-1"><a href="#四级手术-1" class="headerlink" title="四级手术"></a>四级手术</h4><p>1、 恶性肿瘤的腹腔镜胃、结直肠切除及消化道重建手术<br>2、 同种异体小肠移植<br>3、 腹腔镜下结直肠癌根治<br>4、 新技术新项目手术</p>
+<h3 id="甲状腺外科"><a href="#甲状腺外科" class="headerlink" title="甲状腺外科"></a>甲状腺外科</h3><h4 id="一级手术-2"><a href="#一级手术-2" class="headerlink" title="一级手术"></a>一级手术</h4><p>1、 甲状腺腺瘤或囊肿切除<br>2、 甲状舌管囊肿切除<br>3、 甲状腺部分切除<br>4、 颈部淋巴管囊肿切除<br>5、 颈部肿块切除活检</p>
+<h4 id="二级手术-2"><a href="#二级手术-2" class="headerlink" title="二级手术"></a>二级手术</h4><p>1、 甲状腺腺叶切除<br>2、 甲状腺大部或次全切除</p>
+<h4 id="三级手术-2"><a href="#三级手术-2" class="headerlink" title="三级手术"></a>三级手术</h4><p>1、 甲状腺癌根治性切除术<br>2、 颈淋巴结清扫<br>3、 甲状腺全切除术<br>4、 胸骨后甲状腺切除<br>5、 甲状旁腺手术</p>
+<h4 id="四级手术-2"><a href="#四级手术-2" class="headerlink" title="四级手术"></a>四级手术</h4><p>1、 腹腔镜甲状腺手术<br>2、 新技术新项目手术</p>
+<h3 id="肛肠外科"><a href="#肛肠外科" class="headerlink" title="肛肠外科"></a>肛肠外科</h3><h4 id="一级手术-3"><a href="#一级手术-3" class="headerlink" title="一级手术"></a>一级手术</h4><p>1、 肛周皮下脓肿切开引流及一期根治术<br>2、 简单肛瘘切开，切除术或挂线疗法<br>3、 肛裂切除术<br>4、 肛乳头肥大切除术<br>5、 单纯内痔及血栓外痔切除术<br>6、 结肠造口术</p>
+<h4 id="二级手术-3"><a href="#二级手术-3" class="headerlink" title="二级手术"></a>二级手术</h4><p>1、 结肠部分切除术<br>2、 经肛门直肠良性息肉切除术<br>3、 混合痔外剥内扎术<br>4、 乙状结肠扭转复位术<br>5、 吻合器痔上黏膜环切钉合术（PPH）<br>6、 藏毛窦囊肿和窦道切除术<br>7、 肛周Paget病手术<br>8、 造口旁疝修补术<br>9、 造口还纳术</p>
+<h4 id="三级手术-3"><a href="#三级手术-3" class="headerlink" title="三级手术"></a>三级手术</h4><p>1、 右半，左半，横及乙状结肠癌根治术<br>2、 经腹或会阴直肠癌根治术<br>3、 直肠脱垂固定术<br>4、 直肠骶骨悬吊术<br>5、 直肠脱垂直肠周围硬化剂注射疗法<br>6、 肛门圈缩小术<br>7、 Ripstein, Goldberg, Aitemeir, Nigro手术<br>8、 复杂肛瘘切开或挂线术<br>9、 肛提肌上脓肿切开引流术<br>10、 经肛门或阴道直肠前突修补术<br>11、 结肠次全切除盲肠直肠吻合术<br>12、 Hartmann手术<br>13、 全结肠直肠节除，永久性回肠造口术</p>
+<h4 id="四级手术-3"><a href="#四级手术-3" class="headerlink" title="四级手术"></a>四级手术</h4><p>1、 直肠癌扩大根治术<br>2、 改变Bacon手术<br>3、 后盆腔切除术<br>4、 全盆腔清扫术<br>5、 合结肠切除，回肠贮袋肛管吻合术<br>6、 腹腔镜下结直肠癌根治术<br>7、 各种结直肠或肛门术后出现并发症需再次手术者<br>8、 新技术新项目的手术</p>
+<h3 id="血管外科"><a href="#血管外科" class="headerlink" title="血管外科"></a>血管外科</h3><h4 id="一级手术-4"><a href="#一级手术-4" class="headerlink" title="一级手术"></a>一级手术</h4><p>1、 动、静脉插管术<br>2、 血管缝合术<br>3、 浅表静脉手术</p>
+<h4 id="二级手术-4"><a href="#二级手术-4" class="headerlink" title="二级手术"></a>二级手术</h4><p>1、 外周动、静脉取栓术<br>2、 血管吻合手术<br>3、 外周较小动、静脉瘤切除术<br>4、 简单静脉段移植术<br>5、 大隐静脉和股浅静脉瓣膜环缩术<br>6、 大隐静脉激光腔内治疗术和旋切术<br>7、 股深静脉瓣膜成型术</p>
+<h4 id="三级手术-4"><a href="#三级手术-4" class="headerlink" title="三级手术"></a>三级手术</h4><p>1、动脉大隐静脉搭桥术<br>2、 动脉人工血管架桥术<br>3、 四肢动脉瘤切除术<br>4、 颈动脉内膜切除术<br>5、 一般下腔静脉手术</p>
+<h4 id="四级手术-4"><a href="#四级手术-4" class="headerlink" title="四级手术"></a>四级手术</h4><p>1、 胸主动脉瘤及腹主动脉瘤手术<br>2、 复杂下腔静脉手术<br>3、 颈部动脉瘤手术<br>4、 颈动脉体瘤手术<br>5、 血管镜手术<br>6、 新技术新项目手术</p>
+<h3 id="乳腺外科"><a href="#乳腺外科" class="headerlink" title="乳腺外科"></a>乳腺外科</h3><h4 id="一级手术-5"><a href="#一级手术-5" class="headerlink" title="一级手术"></a>一级手术</h4><p>1、 乳腺脓肿引流<br>2、 乳腺活检<br>3、 乳腺良性肿瘤切除<br>4、 乳腺外伤手术</p>
+<h4 id="二级手术-5"><a href="#二级手术-5" class="headerlink" title="二级手术"></a>二级手术</h4><p>1、 乳腺单纯切除术<br>2、 乳腺区段切除术<br>3、 导管内乳头状瘤切除术</p>
+<h4 id="三级手术-5"><a href="#三级手术-5" class="headerlink" title="三级手术"></a>三级手术</h4><p>1、 乳腺癌根治术及改良根治术<br>2、 乳房成型术<br>3、 乳房重建术<br>4、 保乳手术</p>
+<h4 id="四级手术-5"><a href="#四级手术-5" class="headerlink" title="四级手术"></a>四级手术</h4><p>1、 乳腺癌扩大根治术<br>2、新技术新项目手术</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Zhong L</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E5%8C%BB%E5%AD%A6/"># 医学</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2020/02/17/%E7%B3%96%E5%B0%BF%E7%97%85%E9%A5%AE%E9%A3%9F%E5%8E%9F%E5%88%99/">糖尿病饮食原则</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Zhong L | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
