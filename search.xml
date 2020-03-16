@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>容器技术:Docker</title>
+      <title>Docker</title>
       <link href="/2020/03/16/Docker/"/>
       <url>/2020/03/16/Docker/</url>
       
@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Linux </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Linux </tag>
+            <tag> Docker </tag>
             
         </tags>
       
@@ -38,7 +38,7 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       
@@ -107,7 +107,7 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       
@@ -188,14 +188,14 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> git </tag>
+            <tag> Git </tag>
             
         </tags>
       
