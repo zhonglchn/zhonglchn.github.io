@@ -29,11 +29,11 @@
     
     
     <entry>
-      <title>糖尿病饮食原则</title>
+      <title>软件安装</title>
       <link href="/2020/02/17/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
       <url>/2020/02/17/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
       
-        <content type="html"><![CDATA[<p>title: 糖尿病饮食原则</p><p>date: 2020-02-17 15:20:40</p><p>category:</p><p>  - 李惠程</p><p>tags:</p><p>  - 医学</p><p>-–</p><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h4 id="1-Elasticsearch"><a href="#1-Elasticsearch" class="headerlink" title="1.Elasticsearch"></a>1.Elasticsearch</h4><p>​    可安装绿色版</p><p>​    双击bin目录下的elasticsearch.bat启动，IK分词器解压到plugins文件夹下</p><h5 id="kibana"><a href="#kibana" class="headerlink" title="kibana"></a>kibana</h5><p>​    双击bat文件启动</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h4 id="1-Elasticsearch"><a href="#1-Elasticsearch" class="headerlink" title="1.Elasticsearch"></a>1.Elasticsearch</h4><p>​    可安装绿色版</p><p>​    双击bin目录下的elasticsearch.bat启动，IK分词器解压到plugins文件夹下</p><h5 id="kibana"><a href="#kibana" class="headerlink" title="kibana"></a>kibana</h5><p>​    双击bat文件启动</p>]]></content>
       
       
       <categories>
