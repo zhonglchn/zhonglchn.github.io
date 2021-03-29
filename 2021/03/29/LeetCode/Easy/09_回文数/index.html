@@ -10,7 +10,7 @@
 
 
 
-<title>以前我有个朋友 | 明天就放假了</title>
+<title>09.回文数 | 明天就放假了</title>
 
 
 
@@ -110,21 +110,21 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">以前我有个朋友</h1>
+            <h1 class="post-title">09.回文数</h1>
             
                 <div class="post-meta">
                     
 
                     
                         <span class="post-time">
-                        Date: <a href="#">一月 4, 2020&nbsp;&nbsp;17:34:54</a>
+                        Date: <a href="#">三月 29, 2021&nbsp;&nbsp;18:09:04</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/%E6%96%87/">文</a>
+                                <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
                             
                         </span>
                     
@@ -133,16 +133,8 @@
         </header>
 
         <div class="post-content">
-            <p>​    阿T啊：</p>
-<p>​        我是个想要拼命抓住感情的人，不管是爱情还是友情。</p>
-<p>我在亲情中没有得到足够的爱，在高中时期把一切的感情都压在了友情身上，用现在的话来说，我在友情里面是个卑微的舔狗。我一直认为只要用心对待，只要你拿出一颗心放在他们面前，他们迟早会拥抱你，毕竟我先跨出了那一步。</p>
-<p>​        但是我忘记了不是人人都能体会到你的好，不是每个人都能看到你的，也不是每个人在你掏出心肺时张开双手是为了拥抱，还有的是为了夺取你的心跟他人炫耀。</p>
-<p>​        L是我高一同学，高一我和她都在全校最好的班垫底，她热情开放，有很多朋友，不管是男生还是女生都很喜欢她。和她成为朋友是很偶然的机会，两个人座位分到一起，上课都不认真听课，于是走到一起，后来高二分班分开，我在二楼，她在三楼，我害怕她忘记我，只要有时间都会去找她，带着问候和零食。她没有下来看过我，我没有在乎，觉得她大概就是不喜欢联系的一个人。我告诉她，没钱了可以找我，在能力范围之类我会帮他解决。后来学业渐渐繁重，我不再去找她，她也没来找过我。高三分班后，我跟她初中一个好友在同一个班，我于是常常能见到她，虽然每次来她都只是找另一个女孩子，我还是觉得很开心。后来有一天，她在窗外很热情的跟我打招呼，我开心极了，她找我借钱，我很爽快的借给了她。很久之后的一天，我坐在了她初中朋友的前面，她从我身边走过，像是没有看见我，跟她朋友聊得热火朝天。我可能那一次真的知道什么叫，看过了她对别人的好，你才知道她是真的不在乎你。</p>
-<p>​        我朋友跟我说，早就应该放弃，是你没有看透。</p>
-<p>我一直是一个不撞南墙不回头的人，沉浸在自己的幻想中无法自拔，看不清前方的方向，也固执地不肯前进。两年后的某一天，她翻到了我给她写的信看到我的真心，她给我发消息说对不起，对不起错过这样的我。彼时的我早已穿起坚硬的铠甲，找到自己，我无法回应她迟钝的反应，就像我也不知道我该给自己一个什么交代一样，我只能够跟她说，没关系，我从未怪过她。</p>
-<p>​        我怪的只有自己。</p>
-<p>​        以前的朋友，不管对的错的，都能看见时光在身上流淌的痕迹，辜负和在意在多年后都成为青春的一道剪影，我从未怪过她，我把自己感动的一塌糊涂的日子，我奋不顾身的日子，我撞南墙不愿回头的日子，都是静静地能够看见的青春呀。</p>
-<p>​        以前我有个朋友，他教会我很多事情，离开我的生活，奔赴了更加美好的人生。</p>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 回文数</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121 是回文，而 123 不是。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment"> * 链接：https://leetcode-cn.com/problems/palindrome-number</span></span><br><span class="line"><span class="comment"> * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果这个数小于0，或者个位数等于例如1110，则不是回文数，0是回文数</span></span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || x % <span class="number">10</span> == <span class="number">0</span> &amp; x != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> reverseNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 这里只需要反转一半就行了，每次反转都将rn*10 + 余数，将x去掉一位</span></span><br><span class="line">        <span class="keyword">while</span>(x &gt; reverseNumber) &#123;</span><br><span class="line">            reverseNumber = x % <span class="number">10</span> + reverseNumber*<span class="number">10</span>;</span><br><span class="line">           x/=<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果是x的长度是偶数1221 则运算后的x==rn（12 == 12）</span></span><br><span class="line">        <span class="comment">// 如果是x的长度是奇数如12321 则运算后的x(12) == rn(123)/10</span></span><br><span class="line">        <span class="keyword">return</span> x==reverseNumber || x==reverseNumber/<span class="number">10</span> ;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
 
@@ -171,7 +163,9 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E9%98%BFT%E5%95%8A/"># 阿T啊</a>
+                        <a href="/tags/%E7%AE%97%E6%B3%95/"># 算法</a>
+                    
+                        <a href="/tags/LeetCode-Easy/"># LeetCode-Easy</a>
                     
                         
                 </span>
@@ -184,10 +178,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/02/16/Elasticsearch/">Elasticsearch</a>
+                <a class="prev" rel="prev" href="/2021/03/29/LeetCode/Easy/14_%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/">14.最长公共前缀</a>
             
             
-            <a class="next" rel="next" href="/2020/01/01/Git/">git</a>
+            <a class="next" rel="next" href="/2021/03/29/LeetCode/Easy/07_%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/">07.整数反转</a>
             
         </section>
 

@@ -4,6 +4,114 @@
   
     
     <entry>
+      <title>14.最长公共前缀</title>
+      <link href="/2021/03/29/LeetCode/Easy/14_%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/"/>
+      <url>/2021/03/29/LeetCode/Easy/14_%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    编写一个函数来查找字符串数组中的最长公共前缀。</span></span><br><span class="line"><span class="comment">    如果不存在公共前缀，返回空字符串 ""。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// strs = &#123;"ABCB","ABCD","ABGC","ABCD"&#125;;</span></span><br><span class="line">        <span class="keyword">if</span> (strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        String prefix = strs[<span class="number">0</span>]; <span class="comment">// "ABCD"</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; strs.length; i++)</span><br><span class="line">            <span class="keyword">while</span> (!strs[i].startsWith(prefix)) &#123;</span><br><span class="line">                <span class="comment">// 第一次 "ABCD".substring(0,3) -&gt;"ABC"</span></span><br><span class="line">                prefix = prefix.substring(<span class="number">0</span>, prefix.length() - <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span> (prefix.isEmpty()) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="comment">// "AB"</span></span><br><span class="line">        <span class="keyword">return</span> prefix;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> LeetCode-Easy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>09.回文数</title>
+      <link href="/2021/03/29/LeetCode/Easy/09_%E5%9B%9E%E6%96%87%E6%95%B0/"/>
+      <url>/2021/03/29/LeetCode/Easy/09_%E5%9B%9E%E6%96%87%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 回文数</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121 是回文，而 123 不是。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment"> * 链接：https://leetcode-cn.com/problems/palindrome-number</span></span><br><span class="line"><span class="comment"> * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果这个数小于0，或者个位数等于例如1110，则不是回文数，0是回文数</span></span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || x % <span class="number">10</span> == <span class="number">0</span> &amp; x != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> reverseNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 这里只需要反转一半就行了，每次反转都将rn*10 + 余数，将x去掉一位</span></span><br><span class="line">        <span class="keyword">while</span>(x &gt; reverseNumber) &#123;</span><br><span class="line">            reverseNumber = x % <span class="number">10</span> + reverseNumber*<span class="number">10</span>;</span><br><span class="line">           x/=<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果是x的长度是偶数1221 则运算后的x==rn（12 == 12）</span></span><br><span class="line">        <span class="comment">// 如果是x的长度是奇数如12321 则运算后的x(12) == rn(123)/10</span></span><br><span class="line">        <span class="keyword">return</span> x==reverseNumber || x==reverseNumber/<span class="number">10</span> ;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> LeetCode-Easy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>07.整数反转</title>
+      <link href="/2021/03/29/LeetCode/Easy/07_%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/"/>
+      <url>/2021/03/29/LeetCode/Easy/07_%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  07《整数反转》</span></span><br><span class="line"><span class="comment"> * 给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 如果反转后整数超过 32 位的有符号整数的范围 [−231,  231 − 1] ，就返回 0。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 假设环境不允许存储 64 位整数（有符号或无符号）。</span></span><br><span class="line"><span class="comment"> * 来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment"> * 链接：https://leetcode-cn.com/problems/reverse-integer</span></span><br><span class="line"><span class="comment"> * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> reverseNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = x % <span class="number">10</span>;</span><br><span class="line">            <span class="comment">// 如果反转后整数超过 32 位的有符号整数的范围 [−231,  231 − 1] ，就返回 0</span></span><br><span class="line">            <span class="comment">//  [-2147483648,2147483647]</span></span><br><span class="line">            <span class="keyword">if</span> (reverseNumber &gt; <span class="number">214748364</span> || (reverseNumber == <span class="number">214748364</span> &amp;&amp; temp &gt; <span class="number">7</span>)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">           <span class="keyword">if</span> (reverseNumber &lt; -<span class="number">214748364</span> || (reverseNumber == -<span class="number">214748364</span> &amp;&amp; temp &lt; -<span class="number">8</span>))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            reverseNumber = temp + reverseNumber * <span class="number">10</span>;</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> reverseNumber;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> LeetCode-Easy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>01.两数之和</title>
+      <link href="/2021/03/29/LeetCode/Easy/01_%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+      <url>/2021/03/29/LeetCode/Easy/01_%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 《两数之和》</span></span><br><span class="line"><span class="comment"> * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。</span></span><br><span class="line"><span class="comment"> * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</span></span><br><span class="line"><span class="comment"> * 来源：力扣（LeetCode）</span></span><br><span class="line"><span class="comment"> * 链接：https://leetcode-cn.com/problems/two-sum</span></span><br><span class="line"><span class="comment"> * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    <span class="comment">//  int[] nums = &#123;3, 2, 4, 5, 7&#125;;</span></span><br><span class="line">        <span class="comment">//  int target = 5;</span></span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length ; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target-nums[i]),i&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 第一次map为空，put（3，0）</span></span><br><span class="line">            map.put(nums[i],i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">未测试</span></span><br><span class="line"><span class="comment"> public void twoSum01(int[] nums, int target) &#123;</span></span><br><span class="line"><span class="comment">        List&lt;Integer&gt; integers = Arrays.stream(nums).boxed().collect(Collectors.toList());</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        int temp;</span></span><br><span class="line"><span class="comment">        for (int i = 0; i &lt; nums.length; i++) &#123;</span></span><br><span class="line"><span class="comment">            temp = target - nums[i];</span></span><br><span class="line"><span class="comment">            if (integers.contains(temp)) &#123;</span></span><br><span class="line"><span class="comment">                Integer index = getIndex(temp, nums);</span></span><br><span class="line"><span class="comment">                System.out.println(i + "," + index);</span></span><br><span class="line"><span class="comment">                return;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    public Integer getIndex(int temp, int[] nums) &#123;</span></span><br><span class="line"><span class="comment">        for (int j = 0; j &lt; nums.length; j++) &#123;</span></span><br><span class="line"><span class="comment">            if (nums[j] == temp) &#123;</span></span><br><span class="line"><span class="comment">                return j;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        return null;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> LeetCode-Easy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>狂人日记</title>
       <link href="/2021/03/28/%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0/"/>
       <url>/2021/03/28/%E7%8B%82%E4%BA%BA%E6%97%A5%E8%AE%B0/</url>
@@ -139,38 +247,9 @@
       
         <tags>
             
-            <tag> 入门 </tag>
-            
             <tag> ElasticSearch </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>二分查找法入门</title>
-      <link href="/2020/01/05/%E4%BA%8C%E5%88%86%E6%B3%95%E5%85%A5%E9%97%A8/"/>
-      <url>/2020/01/05/%E4%BA%8C%E5%88%86%E6%B3%95%E5%85%A5%E9%97%A8/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">代码演示：</span><br><span class="line"></span><br><span class="line"><span class="comment">/** versions=1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zhonglchn</span></span><br><span class="line"><span class="comment"> * 个人案例： 计算机在指定范围内猜用户输入的数字，设计一个程序，不管用户输的什么数字，计算机最多只需要查找的次数。</span></span><br><span class="line"><span class="comment"> * 二分查找法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 查找的范围</span></span><br><span class="line">        <span class="keyword">int</span> notArr = <span class="number">18</span>;</span><br><span class="line">        <span class="comment">// number为需要猜测的数字</span></span><br><span class="line">        <span class="keyword">int</span> number = <span class="number">8</span>;</span><br><span class="line">        <span class="comment">// guess为你猜的数字，根据二分查找法</span></span><br><span class="line">        <span class="keyword">int</span> guess = notArr/<span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 初始化查找的次数</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 第一次查找的最大范围</span></span><br><span class="line">        <span class="keyword">int</span> max = notArr;</span><br><span class="line">        <span class="comment">// 第一次查找的最小范围</span></span><br><span class="line">        <span class="keyword">int</span> min = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (guess != number) &#123;</span><br><span class="line">            <span class="comment">// 进来就代表查找了一次。</span></span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">if</span> (guess &gt; number) &#123;</span><br><span class="line">                <span class="comment">// 上面定义了guess初始化为第一次，故做以下判断</span></span><br><span class="line">                <span class="keyword">if</span>(count==<span class="number">1</span>) &#123; max=max/<span class="number">2</span>; &#125;</span><br><span class="line">                guess = (max + min) / <span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">if</span>(guess &gt; number)&#123;</span><br><span class="line">                        max = guess;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        min = guess;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">               guess = (guess + max)/<span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">if</span>(guess &gt; number)&#123;</span><br><span class="line">                       max = guess;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        min = guess;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 因为在循环外面就猜了一次，故需要+1；</span></span><br><span class="line">        System.out.println(count+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 - 入门案例 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
             <tag> 入门 </tag>
-            
-            <tag> 算法 </tag>
-            
-            <tag> 案例 </tag>
             
         </tags>
       
